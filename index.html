@@ -54,7 +54,15 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
     function stripVowels(str) {
-
+      const split = str.split('')
+      const result = []
+      for (let idx = 0; idx < split.length; idx++) {
+        const char = split[idx]
+        if (char !== 'a' && char !== 'e' && char !== 'i' && char !== 'o' && char !== 'u') {
+          result.push(char)
+        }
+      }
+      return result.join('')
     }
 
     // 👉 CHALLENGE 3
