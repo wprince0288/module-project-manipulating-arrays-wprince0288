@@ -158,7 +158,10 @@
     // 🧠 The "tail" prop contains an array holding the elements of the array after the first one.
     // 🧠 Examples of usage:
     // headAndTail([1, 2, 3]) // should return { head: 1, tail: [2, 3] }
-    function headAndTail() {
+    function headAndTail(arr) {
+      let head = arr[0]
+      let tail = arr.slice(1)
+      return { head, tail }
 
     }
 
