@@ -103,7 +103,7 @@
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
     function fightMonsters(lifePoints) {
       let round = 1
-      while (lifePoints >0) {
+      while (lifePoints > 0) {
         lifePoints -= round
         if (lifePoints <= 0) {
           return `You died in round ${round}`
@@ -136,8 +136,19 @@
     // 🧠 Ages in the subarrays should appear in the same order they appeared in the original array.
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
-    function separateAges() {
+    function separateAges(ages) {
+      let under21 = []
+      let everyoneElse = []
 
+      for (let i = 0; i < ages.length; i++) {
+        let age = ages[i]
+        if (age < 21) {
+          under21.push(age)
+        } else {
+          everyoneElse.push(age)
+        }
+      }
+      return [under21, everyoneElse]
     }
 
     // 👉 CHALLENGE 7
