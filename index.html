@@ -101,8 +101,15 @@
     // 🧠 There are many ways to solve this, but practice using a while loop.
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
-    function fightMonsters() {
-
+    function fightMonsters(lifePoints) {
+      let round = 1
+      while (lifePoints >0) {
+        lifePoints -= round
+        if (lifePoints <= 0) {
+          return `You died in round ${round}`
+        }
+        round++
+      }
     }
 
     // 👉 CHALLENGE 5
