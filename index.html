@@ -119,8 +119,14 @@
     // findEvenNums([0, 1, 2, 3, 4]) // should return [0, 2, 4]
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
-    function findEvenNums() {
-
+    function findEvenNums(ints) {
+      let evenNums = [];
+      for (let i = 0; i < ints.length; i++) {
+        if (ints[i] % 2 === 0) {
+          evenNums.push(ints[i]);
+        }
+      }
+      return evenNums;
     }
 
     // 👉 CHALLENGE 6
