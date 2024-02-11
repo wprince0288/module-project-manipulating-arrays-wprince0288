@@ -45,8 +45,6 @@
       return result
     }
 
-
-
     // 👉 CHALLENGE 2
     // 🧠 The function stripVowels takes a string, strips all lowcase vowel letters (a,e,i,o,u) from it and returns it.
     // 🧠 Example of usage:
@@ -70,8 +68,20 @@
     // 🧠 Examples of usage:
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
-    function sumNumsWhile() {
-
+    function sumNumsWhile(nums) {
+      let result = 0
+      let idx = 0
+      while (idx < nums.length) {
+        let element = nums[idx]
+        if (typeof element === 'number') {
+          if (element === 13) {
+            return "I'm too superstitious!"
+          }
+          result += element
+        }
+        idx++
+      }
+      return result
     }
 
     // 👉 CHALLENGE 4
