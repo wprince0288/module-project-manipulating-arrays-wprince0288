@@ -208,7 +208,12 @@
     // 🧠 Practice using pop and slice.
     // 🧠 Note that pop modifies the original array in place and returns the "popped" element, whereas slice gives us a brand new array.
     function crazyTrimmer(arr) {
-
+      if (arr.length % 2 === 0) {
+        arr.pop()
+        return arr
+      } else {
+        return arr.slice(1, arr.length -1)
+      }
     }
 
     // 🧪 TESTS, do not work below this line
