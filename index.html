@@ -172,8 +172,29 @@
     // nestedLoops(['hello', 'goodbye']) // should return ['hEllO', 'gOOdbyE']
     // ❗ Notes:
     // 🧠 To capitalize a string you can use its toUpperCase method: "a".toUpperCase() returns "A"
-    function nestedLoops() {
+    function nestedLoops(strings) {
+      let result = []
 
+      for (let idx in strings) {
+
+        let word = strings[idx]
+        //console.log(word)
+
+          let modifiedWord = ''
+        for (let idx in word) {
+          let char = word[idx]
+          //console.log(char)
+
+          if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+            let upperCased = char.toUpperCase()
+            modifiedWord += upperCased 
+          } else {
+            modifiedWord += char
+          }
+        }
+        result.push(modifiedWord)
+      }
+      return result
     }
 
     // 👉 CHALLENGE 9
